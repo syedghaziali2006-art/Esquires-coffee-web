@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, ArrowUpRight, Navigation, Sparkles, AlertCircle } from './icons';
+import { MapPin, Phone, Clock, ArrowUpRight, Navigation, AlertCircle } from './icons';
 import { CAFE_INFO } from '../data/cafeData';
 
 interface VisitSectionProps {
@@ -63,7 +63,7 @@ export const VisitSection: React.FC<VisitSectionProps> = ({ onOpenImage }) => {
                 Karachi, Pakistan
               </p>
               <div className="pt-2 text-xs text-amber-200/80 font-grotesk flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <Navigation className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
                 <span>Easily accessible via main mall escalators & central elevators</span>
               </div>
             </div>

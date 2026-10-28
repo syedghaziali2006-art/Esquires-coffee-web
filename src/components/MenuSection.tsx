@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Utensils, Coffee, Cake, Phone, Eye, Sparkles, AlertCircle } from './icons';
+import { Utensils, Coffee, Cake, Phone, Eye, ArrowUpRight, AlertCircle } from './icons';
 import { MENU_HIGHLIGHTS, CAFE_INFO } from '../data/cafeData';
 
 interface MenuSectionProps {
@@ -172,7 +172,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
                     className="hover:text-tangerine-deep transition-colors flex items-center gap-1 font-grotesk font-semibold text-espresso-800"
                   >
                     <span>Check Today</span>
-                    <Sparkles className="w-3 h-3 text-tangerine-deep" />
+                    <ArrowUpRight className="w-3 h-3 text-tangerine-deep" />
                   </a>
                 </div>
               </div>

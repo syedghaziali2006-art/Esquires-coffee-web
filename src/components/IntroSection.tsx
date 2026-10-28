@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, ShieldCheck, Sparkles } from './icons';
+import { Compass, ShieldCheck, Cake } from './icons';
 
 interface IntroSectionProps {
   onOpenImage?: (src: string, alt: string, caption?: string) => void;
@@ -63,7 +63,7 @@ export const IntroSection: React.FC<IntroSectionProps> = ({ onOpenImage }) => {
               </div>
 
               <div className="p-4 rounded-xl bg-porcelain-dark/70 border border-porcelain-border flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <Cake className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-grotesk font-bold text-xs uppercase tracking-wider text-espresso">
                     Fresh Oven Bakes
