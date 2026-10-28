@@ -11,7 +11,7 @@ export const VisitSection: React.FC<VisitSectionProps> = ({ onOpenImage }) => {
     <section
       id="visit"
       aria-label="Location and Visit Information"
-      className="relative bg-plum-950 text-porcelain py-24 sm:py-32 overflow-hidden border-t border-lavender/10"
+      className="relative bg-plum-950 text-porcelain py-16 sm:py-24 lg:py-32 overflow-hidden border-t border-lavender/10"
     >
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -22,32 +22,32 @@ export const VisitSection: React.FC<VisitSectionProps> = ({ onOpenImage }) => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="flex items-center gap-2.5 mb-3">
+        <div className="max-w-3xl mb-10 sm:mb-16">
+          <div className="flex items-center gap-2.5 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-tangerine animate-pulse"></span>
             <span className="font-grotesk text-xs tracking-widest text-lavender uppercase font-semibold">
               Find Us In Clifton
             </span>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.02]">
+          <h2 className="font-display font-extrabold text-3xl xs:text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.04]">
             YOUR NEXT CUP
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-tangerine to-lavender-light">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-tangerine to-lavender-light mt-0.5 sm:mt-1">
               IS WAITING.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-porcelain/80 font-sans leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-porcelain/80 font-sans leading-relaxed">
             Located on the second floor of Dolmen Mall Clifton, Karachi. Stop by for an unhurried artisan coffee, comforting food, and seaside hospitality.
           </p>
         </div>
 
         {/* Content Grid: Contact Details & Storefront Visual */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
           {/* Details Card (6 cols on lg) */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             
             {/* Address Block (Glass Card) */}
-            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/15 space-y-3 shadow-2xl">
+            <div className="glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/15 space-y-3 shadow-2xl">
               <div className="flex items-center gap-3 text-amber-400">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
                 <span className="font-grotesk text-xs uppercase tracking-widest font-bold">
@@ -116,7 +116,7 @@ export const VisitSection: React.FC<VisitSectionProps> = ({ onOpenImage }) => {
             
             {/* Storefront Image */}
             <div
-              className="relative rounded-3xl overflow-hidden bg-espresso border border-lavender/20 shadow-luxury group cursor-pointer"
+              className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-espresso border border-lavender/20 shadow-luxury group cursor-pointer"
               onClick={() =>
                 onOpenImage &&
                 onOpenImage(
@@ -129,7 +129,7 @@ export const VisitSection: React.FC<VisitSectionProps> = ({ onOpenImage }) => {
               <img
                 src="/images/branch/dolmen-storefront.webp"
                 alt="Actual Esquires Coffee Storefront at Dolmen Mall Clifton"
-                className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700 ease-luxury"
+                className="w-full h-64 xs:h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700 ease-luxury"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-plum-950/80 via-transparent to-transparent"></div>

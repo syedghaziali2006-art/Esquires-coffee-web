@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
   return (
     <footer
       aria-label="Site Footer"
-      className="bg-cacao-950 text-porcelain border-t border-white/10 pt-16 sm:pt-20 pb-12 overflow-hidden"
+      className="bg-cacao-950 text-porcelain border-t border-white/10 pt-16 sm:pt-20 pb-24 sm:pb-12 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

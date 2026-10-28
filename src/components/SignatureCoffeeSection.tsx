@@ -25,7 +25,7 @@ export const SignatureCoffeeSection: React.FC<SignatureCoffeeSectionProps> = ({ 
     <section
       id="signature"
       aria-label="Signature Coffee Experiences"
-      className="relative bg-plum-950 text-porcelain py-24 sm:py-32 overflow-hidden border-t border-lavender/10"
+      className="relative bg-plum-950 text-porcelain py-16 sm:py-24 lg:py-32 overflow-hidden border-t border-lavender/10"
     >
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
@@ -36,17 +36,17 @@ export const SignatureCoffeeSection: React.FC<SignatureCoffeeSectionProps> = ({ 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-6 border-b border-white/10 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-6 border-b border-white/10 pb-6 sm:pb-8">
           <div>
-            <div className="flex items-center gap-2.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-2.5">
               <span className="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(229,149,57,0.8)]"></span>
               <span className="font-grotesk text-xs tracking-widest text-amber-300 uppercase font-semibold">
                 Curated Coffee & Bakes
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.02]">
+            <h2 className="font-display font-extrabold text-3xl xs:text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.04]">
               SIGNATURE SIPS &
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8] mt-0.5 sm:mt-1">
                 DESSERT PAIRINGS.
               </span>
             </h2>
@@ -64,14 +64,14 @@ export const SignatureCoffeeSection: React.FC<SignatureCoffeeSectionProps> = ({ 
         </div>
 
         {/* Asymmetrical 3-Column Visual Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           {SIGNATURE_COFFEE.map((drink, idx) => {
             const isCenter = idx === 1;
 
             return (
               <div
                 key={drink.id}
-                className={`lg:col-span-4 flex flex-col justify-between rounded-3xl p-6 sm:p-8 transition-all duration-500 border ${
+                className={`lg:col-span-4 flex flex-col justify-between rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all duration-500 border ${
                   isCenter
                     ? 'glass-card border-amber-400/40 shadow-glow-caramel lg:-translate-y-4'
                     : 'glass-card border-white/10 hover:border-amber-400/40'

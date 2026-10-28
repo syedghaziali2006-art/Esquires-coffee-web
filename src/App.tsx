@@ -11,6 +11,7 @@ import { VisitSection } from './components/VisitSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { ImageModal } from './components/ImageModal';
+import { MobileBottomDock } from './components/MobileBottomDock';
 
 export const App: React.FC = () => {
   const [modalState, setModalState] = useState<{
@@ -84,6 +85,9 @@ export const App: React.FC = () => {
         imageAlt={modalState.imageAlt}
         caption={modalState.caption}
       />
+
+      {/* Floating Glass Mobile Dock */}
+      <MobileBottomDock />
     </div>
   );
 };

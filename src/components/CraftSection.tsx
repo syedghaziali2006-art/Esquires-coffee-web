@@ -23,7 +23,7 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenImage }) => {
     <section
       id="craft"
       aria-label="The Coffee Craft Experience"
-      className="relative bg-espresso-950 text-porcelain py-24 sm:py-32 overflow-hidden border-t border-lavender/10"
+      className="relative bg-espresso-950 text-porcelain py-16 sm:py-24 lg:py-32 overflow-hidden border-t border-lavender/10"
     >
       {/* Ambient plum gradient */}
       <div className="absolute inset-0 pointer-events-none">
@@ -34,33 +34,33 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenImage }) => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="flex items-center gap-2.5 mb-3">
+        <div className="max-w-3xl mb-10 sm:mb-16">
+          <div className="flex items-center gap-2.5 mb-2.5">
             <span className="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(229,149,57,0.8)]"></span>
             <span className="font-grotesk text-xs tracking-widest text-amber-300 uppercase font-semibold">
               The Artisan Ritual
             </span>
           </div>
-          <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.02]">
+          <h2 className="font-display font-extrabold text-3xl xs:text-4xl sm:text-6xl md:text-7xl text-porcelain tracking-tight leading-[1.04]">
             SLOW ROAST.
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8]">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8] mt-0.5 sm:mt-1">
               GOLDEN OVEN BAKES.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-porcelain/80 font-sans leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-porcelain/80 font-sans leading-relaxed">
             From certified organic single-origin farms to our warm morning pastry ovens, explore the deliberate craftsmanship behind every bakery creation and espresso pour at our Dolmen Mall Clifton bar.
           </p>
         </div>
 
-        {/* Step Navigation Tabs (Glassical) */}
-        <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-4 mb-8 sm:mb-12 no-scrollbar">
+        {/* Step Navigation Tabs (Glassical Edge-to-Edge on Mobile) */}
+        <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-3 mb-8 sm:mb-12 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
           {CRAFT_STEPS.map((step, idx) => {
             const isActive = idx === activeStepIndex;
             return (
               <button
                 key={step.id}
                 onClick={() => setActiveStepIndex(idx)}
-                className={`flex-shrink-0 px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-300 ${
+                className={`flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-300 active:scale-95 ${
                   isActive
                     ? 'glass-btn-primary text-white font-bold'
                     : 'glass-btn-secondary text-porcelain/80 hover:text-white'
@@ -74,12 +74,12 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenImage }) => {
         </div>
 
         {/* Featured Step Showcase (Glass Card) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center glass-card rounded-3xl p-6 sm:p-10 lg:p-12 border border-white/15">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center glass-card rounded-2xl sm:rounded-3xl p-4 xs:p-6 sm:p-10 lg:p-12 border border-white/15">
           
           {/* Visual Showcase (7 cols on lg) */}
           <div className="lg:col-span-7 relative">
             <div
-              className="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden bg-cacao-950 shadow-2xl group cursor-pointer border border-white/10"
+              className="relative w-full h-[260px] xs:h-[320px] sm:h-[420px] lg:h-[480px] rounded-xl sm:rounded-2xl overflow-hidden bg-cacao-950 shadow-2xl group cursor-pointer border border-white/10"
               onClick={() =>
                 onOpenImage &&
                 onOpenImage(currentStep.image, currentStep.title, currentStep.description)

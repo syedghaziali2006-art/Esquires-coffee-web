@@ -23,7 +23,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
     <section
       id="hero"
       aria-label="Welcome to Esquires Coffee"
-      className="relative min-h-screen flex items-center justify-center bg-plum-950 overflow-hidden pt-32 sm:pt-36 lg:pt-32 pb-16 lg:pb-20"
+      className="relative min-h-screen flex items-center justify-center bg-plum-950 overflow-hidden pt-28 sm:pt-36 lg:pt-32 pb-12 sm:pb-16 lg:pb-20"
     >
       {/* Cinematic Ambient Lighting - Warm Cacao, Caramel & Patisserie Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -38,39 +38,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Modern Luxury Typography & Narrative (7 cols on lg) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-7 text-left">
+          <div className="lg:col-span-7 flex flex-col items-start space-y-5 sm:space-y-7 text-left">
             
             {/* Elegant Brand Status Pill (Glass Badge) */}
-            <div className="glass-badge inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-amber-400/35 shadow-md">
+            <div className="glass-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-400/35 shadow-md">
               <span className="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(229,149,57,0.9)] animate-pulse" />
-              <span className="font-sans text-xs tracking-wider text-amber-100/90 font-semibold uppercase">
+              <span className="font-sans text-[11px] xs:text-xs tracking-wider text-amber-100/90 font-semibold uppercase">
                 Artisan Bakery & Organic Coffee · Since 1993
               </span>
             </div>
 
             {/* Contemporary Luxury Editorial Headline - Immediate LCP Paint */}
-            <div className="space-y-1.5">
-              <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-porcelain tracking-tight leading-[1.06]">
+            <div className="space-y-1">
+              <h1 className="font-display font-extrabold text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-porcelain tracking-tight leading-[1.06]">
                 Artisan Coffee.
-                <span className="block font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8] drop-shadow-sm pt-1">
+                <span className="block font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-[#FCE7C8] drop-shadow-sm pt-0.5 sm:pt-1">
                   Fresh Bakery Delights.
                 </span>
               </h1>
             </div>
 
             {/* Editorial Narrative */}
-            <p className="text-base sm:text-lg text-porcelain/90 max-w-xl font-sans font-normal leading-relaxed">
+            <p className="text-sm xs:text-base sm:text-lg text-porcelain/90 max-w-xl font-sans font-normal leading-relaxed">
               A coastal sanctuary of slow craft. Indulge in warm molten skillet cookies, freshly baked butter croissants, and certified 100% organic beans roasted to rich golden crema perfection on the 2nd floor of Dolmen Mall Clifton, Karachi.
             </p>
 
             {/* Primary Action Buttons (Glassical Effect) */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-1">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto pt-1">
               <button
                 onClick={() => handleScrollTo('menu')}
-                className="glass-btn-primary group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-full font-sans font-bold text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-amber-400"
+                className="glass-btn-primary group relative inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 text-white rounded-full font-sans font-bold text-xs xs:text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-amber-400 active:scale-[0.98]"
               >
                 <span>EXPLORE BAKERY & MENU</span>
                 <Coffee className="w-4 h-4 group-hover:rotate-12 transition-transform text-white" />
@@ -78,7 +78,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
 
               <button
                 onClick={() => handleScrollTo('visit')}
-                className="glass-btn-secondary group inline-flex items-center justify-center gap-2.5 px-7 py-4 text-porcelain rounded-full font-sans font-semibold text-sm tracking-widest uppercase focus:outline-none"
+                className="glass-btn-secondary group inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 text-porcelain rounded-full font-sans font-semibold text-xs xs:text-sm tracking-widest uppercase focus:outline-none active:scale-[0.98]"
               >
                 <span>VISIT DOLMEN MALL</span>
                 <Compass className="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 transition-transform" />
@@ -86,35 +86,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
             </div>
 
             {/* Modern Glassmorphic Proof Ribbon (Glass Card) */}
-            <div className="glass-card w-full max-w-xl p-4 sm:p-5 rounded-2xl grid grid-cols-3 gap-3 sm:gap-4 shadow-xl border border-white/15">
+            <div className="glass-card w-full max-w-xl p-3 xs:p-4 sm:p-5 rounded-2xl grid grid-cols-3 gap-2 xs:gap-3 sm:gap-4 shadow-xl border border-white/15">
               {/* Stat 1 */}
-              <div className="border-r border-white/10 pr-2">
-                <div className="flex items-center gap-1.5 text-amber-400">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span className="font-display font-extrabold text-lg sm:text-2xl text-amber-400">100%</span>
+              <div className="border-r border-white/10 pr-1.5 xs:pr-2">
+                <div className="flex items-center gap-1 xs:gap-1.5 text-amber-400">
+                  <ShieldCheck className="w-3.5 h-3.5 xs:w-4 xs:h-4" />
+                  <span className="font-display font-extrabold text-base xs:text-xl sm:text-2xl text-amber-400">100%</span>
                 </div>
-                <span className="block text-xs font-sans text-porcelain font-semibold pt-1">Organic Beans</span>
-                <span className="text-[10px] text-amber-200/80 block">Fresh Bakery Bakes</span>
+                <span className="block text-[11px] xs:text-xs font-sans text-porcelain font-semibold pt-0.5 sm:pt-1 leading-tight">Organic Beans</span>
+                <span className="text-[9px] xs:text-[10px] text-amber-200/80 block leading-tight">Fresh Bakery Bakes</span>
               </div>
 
               {/* Stat 2 */}
-              <div className="border-r border-white/10 pr-2">
+              <div className="border-r border-white/10 pr-1.5 xs:pr-2">
                 <div className="flex items-center gap-1 text-amber-400">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span className="font-display font-extrabold text-lg sm:text-2xl text-porcelain">4.5</span>
+                  <Star className="w-3.5 h-3.5 xs:w-4 xs:h-4 fill-amber-400 text-amber-400" />
+                  <span className="font-display font-extrabold text-base xs:text-xl sm:text-2xl text-porcelain">4.5</span>
                 </div>
-                <span className="block text-xs font-sans text-porcelain font-semibold pt-1">730+ Reviews</span>
-                <span className="text-[10px] text-amber-200/80 block">Google Verified</span>
+                <span className="block text-[11px] xs:text-xs font-sans text-porcelain font-semibold pt-0.5 sm:pt-1 leading-tight">730+ Reviews</span>
+                <span className="text-[9px] xs:text-[10px] text-amber-200/80 block leading-tight">Google Verified</span>
               </div>
 
               {/* Stat 3 */}
               <div>
-                <div className="flex items-center gap-1.5 text-amber-400">
-                  <Clock className="w-4 h-4" />
-                  <span className="font-display font-extrabold text-lg sm:text-2xl text-porcelain">11 PM</span>
+                <div className="flex items-center gap-1 xs:gap-1.5 text-amber-400">
+                  <Clock className="w-3.5 h-3.5 xs:w-4 xs:h-4" />
+                  <span className="font-display font-extrabold text-base xs:text-xl sm:text-2xl text-porcelain">11 PM</span>
                 </div>
-                <span className="block text-xs font-sans text-porcelain font-semibold pt-1">Open Daily</span>
-                <span className="text-[10px] text-amber-200/80 block">2nd Floor Clifton</span>
+                <span className="block text-[11px] xs:text-xs font-sans text-porcelain font-semibold pt-0.5 sm:pt-1 leading-tight">Open Daily</span>
+                <span className="text-[9px] xs:text-[10px] text-amber-200/80 block leading-tight">2nd Floor Clifton</span>
               </div>
             </div>
 
@@ -136,7 +136,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
                     alt="Artisan espresso extraction with rich golden crema at Esquires Coffee"
                     width={480}
                     height={530}
-                    className="w-full h-[420px] sm:h-[490px] lg:h-[530px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-luxury cursor-pointer"
+                    className="w-full h-[360px] xs:h-[420px] sm:h-[490px] lg:h-[530px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-luxury cursor-pointer"
                     loading="eager"
                     decoding="async"
                     onClick={() =>
@@ -154,9 +154,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-cacao-950/90 via-cacao-950/20 to-transparent pointer-events-none" />
 
                 {/* Top Badge: Extraction & Fresh Bakes (Glass Badge) */}
-                <div className="glass-badge absolute top-4 left-4 sm:top-5 sm:left-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 shadow-md">
+                <div className="glass-badge absolute top-3.5 left-3.5 sm:top-5 sm:left-5 inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 shadow-md">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-[11px] font-sans font-medium text-porcelain tracking-wide">
+                  <span className="text-[10px] xs:text-[11px] font-sans font-medium text-porcelain tracking-wide">
                     Artisan Roast & Fresh Bakes
                   </span>
                 </div>
@@ -171,35 +171,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenImage }) => {
                       'Actual Esquires Coffee Karachi Signature Cappuccino served on wooden table'
                     )
                   }
-                  className="glass-card absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-2xl flex items-center justify-between cursor-pointer hover:border-amber-400/50 transition-all group/badge shadow-2xl"
+                  className="glass-card absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-2.5 xs:p-3.5 sm:p-4 rounded-2xl flex items-center justify-between cursor-pointer hover:border-amber-400/50 transition-all group/badge shadow-2xl active:scale-[0.98]"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2.5 xs:gap-3">
                     <img
                       src="/images/branch/signature-latte-art-thumb.webp"
                       alt="Cappuccino & Brownie pairing thumbnail"
                       width={48}
                       height={48}
-                      className="w-12 h-12 rounded-xl object-cover border border-amber-400/50 shadow-md group-hover/badge:scale-105 transition-transform"
+                      className="w-10 h-10 xs:w-12 xs:h-12 rounded-xl object-cover border border-amber-400/50 shadow-md group-hover/badge:scale-105 transition-transform flex-shrink-0"
                     />
                     <div>
                       <div className="flex items-center gap-1.5">
-                        <span className="text-[10px] font-sans font-bold tracking-widest text-amber-400 uppercase">
+                        <span className="text-[9px] xs:text-[10px] font-sans font-bold tracking-widest text-amber-400 uppercase">
                           BAKERY SIGNATURE
                         </span>
-                        <span className="text-[10px] text-amber-300 font-bold">★ 4.9</span>
+                        <span className="text-[9px] xs:text-[10px] text-amber-300 font-bold">★ 4.9</span>
                       </div>
-                      <p className="text-sm font-sans font-bold text-porcelain group-hover/badge:text-amber-400 transition-colors">
+                      <p className="text-xs xs:text-sm font-sans font-bold text-porcelain group-hover/badge:text-amber-400 transition-colors leading-tight">
                         Cappuccino & Warm Brownie
                       </p>
-                      <p className="text-[11px] text-amber-100/70 font-sans">
+                      <p className="text-[10px] xs:text-[11px] text-amber-100/70 font-sans line-clamp-1 xs:line-clamp-none">
                         Cinnamon foam · Warm Belgian chocolate
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className="text-xs font-sans text-porcelain/90 font-medium group-hover/badge:text-amber-400 flex items-center gap-1">
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0 pl-1">
+                    <span className="text-[11px] xs:text-xs font-sans text-porcelain/90 font-medium group-hover/badge:text-amber-400 flex items-center gap-1">
                       <span>View</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-amber-400 group-hover/badge:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3 h-3 xs:w-3.5 xs:h-3.5 text-amber-400 group-hover/badge:translate-x-1 transition-transform" />
                     </span>
                   </div>
                 </div>

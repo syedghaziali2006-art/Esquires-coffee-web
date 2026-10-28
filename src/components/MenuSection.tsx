@@ -22,29 +22,29 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
     <section
       id="menu"
       aria-label="Food and Menu Highlights"
-      className="relative bg-porcelain text-espresso py-24 sm:py-32 overflow-hidden border-t border-porcelain-border"
+      className="relative bg-porcelain text-espresso py-16 sm:py-24 lg:py-32 overflow-hidden border-t border-porcelain-border"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-16 gap-8 border-b border-porcelain-border pb-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-16 gap-6 sm:gap-8 border-b border-porcelain-border pb-6 sm:pb-8">
           <div>
-            <div className="flex items-center gap-2.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-2.5">
               <span className="w-8 h-[2px] bg-amber-500"></span>
               <span className="font-grotesk text-xs tracking-widest text-mocha uppercase font-bold">
                 Artisan Patisserie & Espresso Menu
               </span>
             </div>
-            <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl text-espresso tracking-tight leading-[1.02]">
+            <h2 className="font-display font-extrabold text-3xl xs:text-4xl sm:text-6xl md:text-7xl text-espresso tracking-tight leading-[1.04]">
               ARTISAN BAKERY &
-              <span className="block text-amber-deep font-editorial italic font-normal mt-1">
+              <span className="block text-amber-deep font-editorial italic font-normal mt-0.5 sm:mt-1">
                 COFFEE PATISSERIE.
               </span>
             </h2>
           </div>
 
           <div className="max-w-md space-y-3">
-            <p className="text-base text-espresso-800 font-sans leading-relaxed">
+            <p className="text-sm sm:text-base text-espresso-800 font-sans leading-relaxed">
               Curated highlights from our Dolmen Mall Clifton kitchen. From fresh-baked butter croissants and molten skillet cookies to decadent Belgian chocolate jars and single-origin espresso.
             </p>
             <div className="inline-flex items-center gap-2 text-xs text-mocha font-grotesk bg-porcelain-dark px-3 py-1.5 rounded-lg border border-porcelain-border">
@@ -54,11 +54,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
           </div>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-4 mb-10 sm:mb-12 no-scrollbar">
+        {/* Category Filter Tabs (Smooth Edge-to-Edge Swipe on Mobile) */}
+        <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-3 mb-8 sm:mb-12 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
           <button
             onClick={() => setActiveTab('all')}
-            className={`px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border ${
+            className={`flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border active:scale-95 ${
               activeTab === 'all'
                 ? 'bg-espresso text-porcelain border-espresso shadow-md'
                 : 'bg-porcelain-light text-espresso-700 border-porcelain-border hover:border-mocha'
@@ -69,7 +69,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
 
           <button
             onClick={() => setActiveTab('coffee')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border ${
+            className={`flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border active:scale-95 ${
               activeTab === 'coffee'
                 ? 'bg-espresso text-porcelain border-espresso shadow-md'
                 : 'bg-porcelain-light text-espresso-700 border-porcelain-border hover:border-mocha'
@@ -81,7 +81,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
 
           <button
             onClick={() => setActiveTab('savoury')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border ${
+            className={`flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border active:scale-95 ${
               activeTab === 'savoury'
                 ? 'bg-espresso text-porcelain border-espresso shadow-md'
                 : 'bg-porcelain-light text-espresso-700 border-porcelain-border hover:border-mocha'
@@ -93,7 +93,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenImage }) => {
 
           <button
             onClick={() => setActiveTab('dessert')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border ${
+            className={`flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-grotesk text-xs uppercase tracking-widest transition-all duration-200 border active:scale-95 ${
               activeTab === 'dessert'
                 ? 'bg-espresso text-porcelain border-espresso shadow-md'
                 : 'bg-porcelain-light text-espresso-700 border-porcelain-border hover:border-mocha'

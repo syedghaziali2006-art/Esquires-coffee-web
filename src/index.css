@@ -16,6 +16,7 @@
   html {
     color-scheme: dark;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -23,6 +24,11 @@
     color: #FAF7F2;
     font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
     overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  button, a {
+    touch-action: manipulation;
   }
 
   /* Focus visible styles for accessibility */
@@ -172,4 +178,15 @@
 
 .animate-fade-in {
   animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
